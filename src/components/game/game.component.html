@@ -1,0 +1,10 @@
+<h2>Game</h2>
+<p *ngIf="gameData">Game started! Guess a number between 1 and 10</p>
+<p>Your Score (Attempts): {{ score }}</p>
+
+<!-- Game Input & Buttons -->
+<input type="number" [(ngModel)]="guessedNumber" placeholder="Enter your guess" />
+<button (click)="guessNumber()">Submit Guess</button>
+
+<!-- Restart Button (Optional, if you want to restart the game) -->
+<button (click)="startGame()">Restart Game</button>

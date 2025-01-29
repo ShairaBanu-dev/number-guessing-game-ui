@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router'; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true, 
+  imports: [RouterModule], 
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'number-guessing-game';
+  [x: string]: any;
+  constructor(private router: Router, private titleService: Title) {} 
+
+  ngOnInit() {
+    this.titleService.setTitle('Number Guessing Game');
+  }
+
+
+  navigate(path: string) {
+    this.router.navigate([path]); 
+    console.log(`Navigating to: ${path}`);
+  }
 }
