@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Play a fun Number Guessing Game built with Angular.">
+  <meta name="author" content="Shaira Banu">
+
+  <!-- Bootstrap for styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">Number Guessing Game</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/game" routerLinkActive="active">Play Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/leaderboard" routerLinkActive="active">Leaderboard</a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container text-center mt-5">
+    <app-root></app-root>
+    <!-- <router-outlet></router-outlet> -->
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Angular Build JS Files -->
+  <script src="runtime.js" defer></script>
+  <script src="polyfills.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
